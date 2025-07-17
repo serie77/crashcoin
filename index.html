@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Coin - The Ultimate Rug Experience</title>
+    <link rel="icon" type="image/png" href="crashcoin.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+        @font-face {
+            font-family: 'Bahnschrift Bold';
+            src: local('Bahnschrift Bold'), local('Bahnschrift-Bold');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Entrance Animation Section -->
+    <div id="entrance" class="entrance-container">
+        <div class="entrance-bg">
+            <div class="chart-container">
+                <div class="chart-line" id="chartLine"></div>
+                <div class="coin-on-chart" id="coinOnChart">
+                    <img src="PFP.png" alt="Crash Coin" class="chart-coin-img">
+                </div>
+            </div>
+            <div class="entrance-text">
+                <h1 class="glitch-text" data-text="CRASH COIN"><span class="crash-text">CRASH</span> <span class="coin-text">COIN</span></h1>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website Section -->
+    <div id="mainSite" class="main-site hidden">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        
+        <header class="header">
+            <div class="banner">
+                <img src="crashcoin.png" alt="Crash Coin Banner" class="banner-img">
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="coin-showcase">
+                <div class="coin-container">
+                    <img src="PFP.png" alt="Crash Coin" class="main-coin-img">
+                    <div class="coin-glow"></div>
+                </div>
+                
+                <div class="coin-info">
+                    <h1 class="main-title"><span class="crash-text">CRASH</span> <span class="coin-text">COIN</span></h1>
+                    
+                    <div class="ca-section">
+                        <label for="contractAddress" class="ca-label">Contract Address (CA)</label>
+                        <div class="ca-input-container">
+                            <input 
+                                type="text" 
+                                id="contractAddress" 
+                                placeholder="Enter contract address..."
+                                class="ca-input"
+                            >
+                            <button class="copy-btn" onclick="copyCA()">
+                            <span class="copy-icon">COPY</span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="pump-btn" onclick="buyOnPump()">
+                            <span class="btn-text">BUY ON PUMP</span>
+                        </button>
+                        
+                        <button class="chart-btn" onclick="viewChart()">
+                            <span class="btn-text">VIEW CHART</span>
+                        </button>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link twitter-link">
+                            <span class="social-icon">𝕏</span>
+                        </a>
+                        <a href="#" class="social-link community-link">
+                            <span class="social-icon">👥</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- What is a Crash Coin Section -->
+        <section class="info-section">
+            <div class="info-content">
+                <h2 class="info-title">WHAT IS A <span class="crash-text">CRASH</span> <span class="coin-text">COIN</span>?</h2>
+                <div class="info-text">
+                    <p>Crash coins are the ultimate high-risk, high-reward tokens that instantly bond and pump before getting obliterated in a single devastating candle.</p>
+                    
+                    <p>Named after the notorious crash gambling games, these tokens create an extremely addictive and unpredictable trading environment where players attempt to "sneak into the bundle" for a chance at hitting the jackpot. Most traders get instantly rugged for 99% losses.</p>
+                    
+                    <p>It's not fully understood why people run crash coins up, however there have been many links to criminal organizations, namely from North Korea with groups such as Lazarus. Entities could find this as an easy method to wash illicit funds.</p>
+                    
+                    <p class="warning-text">Fast-paced. Addictive. Unpredictable. Welcome to the crash.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collage Section -->
+        <section class="collage-section">
+            
+            <div class="collage-container">
+                <div class="collage-grid" id="collageGrid">
+                    <!-- Images will be dynamically loaded here -->
+                </div>
+            </div>
+            
+            <!-- Modal for enlarged images -->
+            <div class="image-modal" id="imageModal" onclick="closeModal()">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <img class="modal-image" id="modalImage" src="" alt="Crash Coin Screenshot">
+                    <div class="modal-navigation">
+                        <button class="modal-nav prev" onclick="navigateModal(-1)">❮</button>
+                        <button class="modal-nav next" onclick="navigateModal(1)">❯</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 <span class="crash-text">CRASH</span> <span class="coin-text">COIN</span>. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
